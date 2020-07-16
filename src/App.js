@@ -6,6 +6,7 @@ import Menu from "./components/Menu";
 import { Route, Switch, Link } from "react-router-dom";
 import Chartkick from "./components/Chartkick/Chartkick";
 import Draftjs from "./components/Draftjs/Draftjs";
+import ReactSelect from "./components//ReactSelect/ReactSelect";
 
 const navigation = [
   {
@@ -24,6 +25,7 @@ const navigation = [
       { title: "Draft.js", dest: "/draftjs" },
       { title: "Paypal", dest: "/paypal" },
       { title: "Stripe", dest: "/stripe" },
+      { title:"React-Select", dest: "/react-select"},
     ],
   },
   {
@@ -65,6 +67,7 @@ function App() {
             <Route path="/" exact render={() => <h1>Home Page</h1>} />
             <Route path="/chartkick" component={Chartkick} />
             <Route path="/draftjs" component={Draftjs} />
+            <Route path="/react-select" component={ReactSelect}/>
             <Route render={() => <h1>Page not found</h1>} />
           </Switch>
         </Main>
